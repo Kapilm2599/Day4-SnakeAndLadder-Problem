@@ -3,18 +3,20 @@ package com.blabz.SnakeLadder;
 import java.util.Random;
 public class SnakeLadder {
 	public static void main(String[] args) {
-		int start;
-	
-		start =  0; 
+		int start = 0;
+		int userPosition = 0;
+		int count = 0;
 	
 		System.out.println("Player Starting Position will be:~ ");
 		System.out.println(+start);
 		
 		Random random = new Random();
+		while (userPosition != 100) {
+			count++;
+		
 		int dice = random.nextInt(6)+1;
 		System.out.println("dice roll result: "+dice);
 		
-		int userPosition = 0;  
 		int cases = random.nextInt(3);	
 		
 		switch (cases) { 
@@ -36,6 +38,9 @@ public class SnakeLadder {
 			}
 		}
 		System.out.println("Presnt Position of the User: " + userPosition);
+		
+	}
+	System.out.println("User has rolled "+count+" times to win!");	
 	
 	
 	}
